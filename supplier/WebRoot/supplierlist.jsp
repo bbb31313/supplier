@@ -7,13 +7,6 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 String MenuNo=request.getParameter("MenuNo");
 
-WebApplicationContext context = (WebApplicationContext) this
-			.getServletContext()
-			.getAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE);
-SupplierSysService sysService=(SupplierSysService)context.getBean("supplierSysService");
-
-List<SupplierTool> tools=sysService.getAllTool();			
-
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -90,30 +83,21 @@ List<SupplierTool> tools=sysService.getAllTool();
 	  //工具条事件
       function toolbarBtnItemClick(item) {
           switch (item.id) {
-          	<%
-          		for(SupplierTool stool:tools){
-          			out.println("case '"+stool.getBtnNo()+"':");
-          			String btn=stool.getBtnNo().substring(0,3);
-          			if(btn.equalsIgnoreCase("add")){
-          				out.println("top.f_addTab(null, '"+stool.getBtnName()+"', '"+stool.getExecution()+"');");
-          			}else if(btn.equalsIgnoreCase("del")){
-          				%>
-          			jQuery.ligerDialog.confirm('确定删除吗?', function (confirm) {
-                      if (confirm)
-                          f_delete();
-                  	});
-          				<%
-          			}else{
-          				%>
-          				var selected = grid.getSelected();
-          				if (!selected) { LG.tip('请选择行!'); return }
-          				top.f_addTab(null, '<%=stool.getBtnName() %>', '<%=stool.getExecution() %>&supid='+selected.supID);
-          				<%
-          	
-          			}
-          			out.println("break;");
-          		}
-          	%>
+          case "addbase":
+           	var selected = grid.getSelected();
+              	if (!selected) { jQuery.ligerDialog.warn('请选择行!'); return }
+              	top.f_addTab(null, '新增', '<%=basePath %>supplierDetail.jsp?sid=' + selected.supid );
+           	break;
+           case "viewbase":
+           	var selected = grid.getSelected();
+              	if (!selected) { jQuery.ligerDialog.warn('请选择行!'); return }
+             	top.f_addTab(null, '详细信息', '<%=basePath %>supplierDetail.jsp?view=1&&sid=' + selected.supid );
+           	break;  
+           case "modifybase":
+           		var selected = grid.getSelected();
+              	if (!selected) { jQuery.ligerDialog.warn('请选择行!'); return }
+              	top.f_addTab(null, '修改', '<%=basePath %>supplierDetail?view=1&&sid=' + selected.supid );
+           	break;  
           }
       }
       

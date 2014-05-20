@@ -131,6 +131,7 @@ public class JsonAction extends ActionSupport {
 		List<SupplierTool> toolList =new ArrayList<SupplierTool>();
 		if (obj!=null) {
 			SupplierUser user=(SupplierUser)obj;
+			System.out.println("MenuNo:"+MenuNo);
 			toolList=supplierSysService.getToolByMenuNo(MenuNo,user);
 		}
 		AjaxResult aResult=new AjaxResult();

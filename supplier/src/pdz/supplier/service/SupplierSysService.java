@@ -91,10 +91,10 @@ public class SupplierSysService {
 		
 		SupplierRoleResoure rs=getRoleResoure(usr);
 		if (rs.getTools()!=null){
-			hql="from SupplierTool stool where stool.MenuNo='"+menuno+"' and stool.BtnId not in ("+rs.getTools()+") and stool.isview=1 order by stool.BtnId ";
+			hql="from SupplierTool stool where stool.menuNo='"+menuno+"' and stool.btnId not in ("+rs.getTools()+") and stool.isview=1 order by stool.btnId ";
 		}else{
 			
-			hql="from SupplierTool stool where stool.MenuNo='"+menuno+"' and stool.isview=1 order by stool.BtnId ";
+			hql="from SupplierTool stool where stool.menuNo='"+menuno+"' and stool.isview=1 order by stool.btnId ";
 		}
 		try {
 			tools=sessionFactory.getCurrentSession().createQuery(hql).list();
