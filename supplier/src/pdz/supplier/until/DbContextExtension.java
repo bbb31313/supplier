@@ -7,6 +7,8 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -23,6 +25,8 @@ import org.springframework.stereotype.Service;
 public class DbContextExtension  {
 	
 	@Resource SessionFactory factory;
+	private static Log logger=LogFactory.getLog(DbContextExtension.class);
+	
     public GridData GetGridData(HttpServletRequest request)
     {
     	 String view =request.getParameter("view"); 
@@ -59,6 +63,7 @@ public class DbContextExtension  {
 
           FilterTranslator whereTranslator = new FilterTranslator();
           String where =request.getParameter("where");
+          logger.debug("where:"+where);
           if (!(where==null))
           {
               //反序列化Filter Group JSON
@@ -96,7 +101,8 @@ public class DbContextExtension  {
 		String commandText;
 		commandText="select count(*) from "+view+" where "+where;
 
-//		System.out.println("commandText:"+commandText);
+		logger.debug("TotalCommandText:"+commandText);
+		
 		int cnt=0;
 		try {
 			Session session=factory.openSession();
@@ -115,7 +121,7 @@ public class DbContextExtension  {
 		int offset=pagenumber==1?0:(pagenumber-1)*pagesize;
 		String hql;
 		hql="from "+view+" where "+where+" order by "+sortname+" "+sortorder;
-//		System.out.println("hql:"+hql);
+		logger.debug("rowsHQL:"+hql);
 		return getListForPage(hql, offset, pagesize);
 	}
 	

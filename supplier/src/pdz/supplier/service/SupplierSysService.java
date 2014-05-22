@@ -10,7 +10,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import pdz.supplier.bean.SelectItem;
 import pdz.supplier.bean.SupplierCategory;
+import pdz.supplier.bean.SupplierLevel;
 import pdz.supplier.bean.SupplierMenu;
 import pdz.supplier.bean.SupplierMenuBean;
 import pdz.supplier.bean.SupplierRoleResoure;
@@ -170,6 +172,19 @@ public class SupplierSysService {
 			return false;
 		}
 		
+	}
+
+	public List<SelectItem> getLevelItem(int i) {
+		String hql="from SupplierLevel l where l.levelType="+i+" order by l.levelid";
+		List<SupplierLevel> levellist=sessionFactory.getCurrentSession().createQuery(hql).list();
+		List<SelectItem> items=new ArrayList<SelectItem>();
+		for (SupplierLevel level : levellist) {
+			SelectItem item=new SelectItem();
+			item.setId(level.getLevelid());
+			item.setText(level.getLevelName());
+			items.add(item);
+		}
+		return items;
 	}
 	
 }

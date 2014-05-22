@@ -1,7 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%@page import="pdz.supplier.service.SupplierSysService"%>
-<%@page import="org.springframework.web.context.WebApplicationContext"%>
-<%@page import="pdz.supplier.bean.SupplierTool"%>
+
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -49,17 +47,16 @@ String MenuNo=request.getParameter("MenuNo");
       var grid = $("#maingrid").ligerGrid({
           columns: 
                 [
-                   { display: "供应商名称", name: "supname", width: 120 },
-                   { display: "注册地址", name: "supzcdz", width: 120 },
-                   { display: "注册年份", name: "supzcnf", width: 180 },
-                   { display: "注册资金", name: "supzczj", width: 180 },
-                   { display: "法定代表人", name: "representative", width: 180 },
-                   { display: "类型", name: "supcategory", width: 180 }, 
-                   { display: "级别", name: "supLEVEL",  width: 180 }, 
-                   { display: "主营范围", name: "main_Range", width: 180 }
+                   { display: "供应商名称", name: "supname", width: 180 },
+                   { display: "推荐部门", name: "depname", width: 120 },
+                   { display: "所属类别", name: "supcategory", width: 180 },
+                   { display: "级别", name: "supLEVEL", width: 180 },
+                   { display: "公司性质", name: "companyType", width: 180 },
+                   { display: "注册资金", name: "supzczj", width: 180 }, 
+                   { display: "成立时间", name: "buildtime",  width: 180 }
                  ], 
            dataAction: 'server',
- 		   url: rootPath + 'baseinfo/baseinfo_getListSupdoc.action?view=SupplierDoc',
+ 		   url: rootPath + 'query/query_getListSupdoc.action?view=SupplierDoc',
            sortName: 'supname', 
            pageSize: 10, 
            toolbar: {},
@@ -70,8 +67,9 @@ String MenuNo=request.getParameter("MenuNo");
 
       $("#formsearch").ligerForm({
 		   fields:[
-		   {display:"按公司名称查询",name:"supname",newline:true,labelWidth:100,width:220,space:30,type:"text",cssClass:"field"},
-		   {display:"按类型查询", name: "supcategoryTO", comboboxName: "supcategory", newline: true, labelWidth: 100, width: 580,space: 30,type: "select",cssClass:"field", options: { valueFieldID: "supcategoryID",cssClass: "field", attr: { "op": "equal"},selectBoxHeight:400,tree: { url: "<%=basePath %>json/json_getCateTree.action", checkbox:false} } }
+		   {display:"供应商名称",name:"supname",newline:true,labelWidth:100,width:220,space:30,type:"text",cssClass:"field"},
+		   {display:"供应商级别",name:"suplevelTo",comboboxName:"supLEVEL",newline:false,labelWidth:100,width:220,space:30,type:"select",cssClass:"field",attr: { "op": "equal"},options:{valueFieldID:"supLEVELID",url:rootPath+"/json/json_supLevelBySelect.action"}},
+		   {display:"供应商类型", name: "supcategoryTO", comboboxName: "supcategory", newline: true, labelWidth: 100, width: 580,space: 30,type: "select",cssClass: "field", attr: { "op": "equal"}, options: { valueFieldID: "supcategoryID",selectBoxHeight:400,tree: { url: "<%=basePath %>json/json_getCateTree.action", checkbox:false} } }
 		   ],
 		   toJSON: JSON2.stringify
 	  });

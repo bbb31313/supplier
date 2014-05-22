@@ -27,6 +27,9 @@
 			<result name="tool" type="json">
 				<param name="root">ajaxResult</param>
 			</result>
+			<result name="supLevelList" type="json">
+				<param name="root">supLevelItem</param>
+			</result>
 		</action>
 	</package>
 

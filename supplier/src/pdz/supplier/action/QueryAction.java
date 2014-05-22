@@ -24,9 +24,21 @@ public class QueryAction extends ActionSupport {
 	
 	
 
+	public GridData getSupdocList() {
+		return supdocList;
+	}
+
+
+
+	public void setSupdocList(GridData supdocList) {
+		this.supdocList = supdocList;
+	}
+
+
+
 	public String getListSupdoc(){
 		HttpServletRequest request=ServletActionContext.getRequest();
 		supdocList=dbContextExtension.GetGridData(request);
-		return "supdoclist";
+		return "supdocList";
 	}
 }

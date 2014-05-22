@@ -250,6 +250,7 @@
                 value = $("#" + options.valueFieldID).val();
                 name = options.valueFieldID;
             }
+            
             group.rules.push({
                 op: op,
                 field: name,

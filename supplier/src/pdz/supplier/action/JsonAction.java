@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import pdz.supplier.bean.AjaxResult;
+import pdz.supplier.bean.SelectItem;
 import pdz.supplier.bean.SupplierMenu;
 import pdz.supplier.bean.SupplierTool;
 import pdz.supplier.bean.SupplierUser;
@@ -30,10 +31,18 @@ public class JsonAction extends ActionSupport {
 	private String LoginPassword;
 	private AjaxResult ajaxResult;
 	private String MenuNo;
-		
+	private List<SelectItem> supLevelItem;
+	
+	
 
 	
 	
+	public List<SelectItem> getSupLevelItem() {
+		return supLevelItem;
+	}
+	public void setSupLevelItem(List<SelectItem> supLevelItem) {
+		this.supLevelItem = supLevelItem;
+	}
 	public String getMenuNo() {
 		return MenuNo;
 	}
@@ -188,5 +197,10 @@ public class JsonAction extends ActionSupport {
 		}
 		ajaxResult=aResult;
 		return "changepwd";
+	}
+	
+	public String supLevelBySelect(){
+		supLevelItem=supplierSysService.getLevelItem(1);
+		return "supLevelList";
 	}
 }
