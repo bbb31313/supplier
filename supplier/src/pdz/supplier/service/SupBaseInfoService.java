@@ -84,6 +84,7 @@ public class SupBaseInfoService {
 	
 	public List<SupplierLicense> getLicensesBySupId(String supid){
 		String hql="from SupplierLicense lse where lse.supID='"+supid+"'";
+		
 		return sessionFactory.getCurrentSession().createQuery(hql).list();
 	}
 	

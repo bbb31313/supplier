@@ -33,6 +33,13 @@
 		</action>
 	</package>
 
+	<package name="supbusjson" namespace="/bus" extends="json-default" >
+		<action name="bus_*" class="supBusAction" method="{1}">
+			
+		</action>
+	</package>
+	
+	
 	<package name="baseinfojson" namespace="/baseinfo" extends="json-default">
 		<action name="baseinfo_*" class="baseInfoAction" method="{1}">
 			<result name="adddoc" type="json">

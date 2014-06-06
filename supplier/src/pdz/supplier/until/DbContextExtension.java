@@ -35,6 +35,7 @@ public class DbContextExtension  {
     	 String _pagenumber =request.getParameter("page"); 
          String _pagesize =request.getParameter("pagesize");  
          
+         
 
          int pagenumber = 0, pagesize = 0; 
           //可分页
@@ -49,6 +50,8 @@ public class DbContextExtension  {
           {
               sortorder = sortorder==null || sortorder.equalsIgnoreCase("asc") ? "desc" : "asc";
           }
+          
+          logger.debug("view:"+view+" ,sortname:"+sortname+" ,sortorder:"+sortorder+" ,page:"+_pagenumber+" ,pagesize:"+_pagesize);
           /*
            * where 为 json参数，格式如下： 
            * {
@@ -108,6 +111,7 @@ public class DbContextExtension  {
 			Session session=factory.openSession();
 			Query query=session.createQuery(commandText);
 			cnt=((Number)query.iterate().next()).intValue();
+			logger.debug("cnt:"+cnt);
 			session.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -120,6 +124,8 @@ public class DbContextExtension  {
 			String sortorder, int pagenumber, int pagesize) {
 		int offset=pagenumber==1?0:(pagenumber-1)*pagesize;
 		String hql;
+
+		if(pagesize==0)pagesize=200;
 		hql="from "+view+" where "+where+" order by "+sortname+" "+sortorder;
 		logger.debug("rowsHQL:"+hql);
 		return getListForPage(hql, offset, pagesize);
@@ -139,6 +145,8 @@ public class DbContextExtension  {
 		query.setFirstResult(offset);
 	    query.setMaxResults(length);
 	    List list = query.list();
+
+	    logger.debug("list.size:"+list.size());
 	    session.close();
 		return list;
 	}

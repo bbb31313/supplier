@@ -69,7 +69,7 @@ String MenuNo=request.getParameter("MenuNo");
 		   fields:[
 		   {display:"供应商名称",name:"supname",newline:true,labelWidth:100,width:220,space:30,type:"text",cssClass:"field"},
 		   {display:"供应商级别",name:"suplevelTo",comboboxName:"supLEVEL",newline:false,labelWidth:100,width:220,space:30,type:"select",cssClass:"field",attr: { "op": "equal"},options:{valueFieldID:"supLEVELID",url:rootPath+"/json/json_supLevelBySelect.action"}},
-		   {display:"供应商类型", name: "supcategoryTO", comboboxName: "supcategory", newline: true, labelWidth: 100, width: 580,space: 30,type: "select",cssClass: "field", attr: { "op": "equal"}, options: { valueFieldID: "supcategoryID",selectBoxHeight:400,tree: { url: "<%=basePath %>json/json_getCateTree.action", checkbox:false} } }
+		   {display:"供应商类型", name: "supcategoryTO", comboboxName: "supcategory", newline: true, labelWidth: 100, width: 220,space: 30,type: "select",cssClass: "field", attr: { "op": "equal"}, options: { valueFieldID: "supcategoryID",selectBoxHeight:400,tree: { url: "<%=basePath %>json/json_getCateTree.action", checkbox:false} } }
 		   ],
 		   toJSON: JSON2.stringify
 	  });
@@ -84,17 +84,17 @@ String MenuNo=request.getParameter("MenuNo");
           case "addbase":
            	var selected = grid.getSelected();
               	if (!selected) { jQuery.ligerDialog.warn('请选择行!'); return }
-              	top.f_addTab(null, '新增', '<%=basePath %>supplierDetail.jsp?sid=' + selected.supid );
+              	top.f_addTab(null, '新增', '<%=basePath %>supplierDetail.jsp?sid=' + selected.supID );
            	break;
            case "viewbase":
            	var selected = grid.getSelected();
               	if (!selected) { jQuery.ligerDialog.warn('请选择行!'); return }
-             	top.f_addTab(null, '详细信息', '<%=basePath %>supplierDetail.jsp?view=1&&sid=' + selected.supid );
+             	top.f_addTab(null, '详细信息', '<%=basePath %>supplierInfo.jsp?view=1&&sid=' + selected.supID );
            	break;  
            case "modifybase":
            		var selected = grid.getSelected();
               	if (!selected) { jQuery.ligerDialog.warn('请选择行!'); return }
-              	top.f_addTab(null, '修改', '<%=basePath %>supplierDetail?view=1&&sid=' + selected.supid );
+              	top.f_addTab(null, '修改', '<%=basePath %>supplierDetail?view=1&&sid=' + selected.supID );
            	break;  
           }
       }

@@ -29,7 +29,6 @@
 		<script src="lib/jquery-validation/messages_cn.js" type="text/javascript"></script>
 		<script src="lib/js/changepassword.js" type="text/javascript"></script>
 		<script src="lib/ligerUI/js/plugins/ligerForm.js" type="text/javascript"></script>		
-
 	<script type="text/javascript">
 		
 		//几个布局的对象
@@ -148,6 +147,7 @@
 
         });
     </script>			
+
 	</head>
 	<jsp:include page="viewpage.jsp"></jsp:include>
 	<body
@@ -174,7 +174,7 @@
 			</div>
 		</div>
 		<div style="height: 32px; line-height: 32px; text-align: center;">
-			Copyright © 2011-2014 百货信息部
+			Copyright  2011-2014 百货信息部
 		</div>
 		<div style="display: none"></div>
 		
