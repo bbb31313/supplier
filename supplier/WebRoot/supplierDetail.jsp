@@ -28,7 +28,7 @@ boolean IsEdit=!ISAdd && !IsView;
   <head>
     <base href="<%=basePath%>">
     
-    <title>供应商信息</title>
+    <title>供应商信息列表</title>
     <link href="<%=basePath %>lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
     <link href="<%=basePath %>lib/ligerUI/skins/Gray/css/all.css" rel="stylesheet" type="text/css" />
     <link href="<%=basePath %>lib/css/common.css" rel="stylesheet" type="text/css" />
