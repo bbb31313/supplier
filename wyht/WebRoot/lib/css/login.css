@@ -1,0 +1,198 @@
+﻿#hbt {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.hbt_a {
+	COLOR: #f6ff00
+}
+A.big5 {
+	FONT-SIZE: 12px; COLOR: #3d3d3d; TEXT-DECORATION: none;FONT-WEIGHT: bold;
+}
+a:hover.big5 {
+	FONT-SIZE: 12px; COLOR: #ac2021; TEXT-DECORATION: none
+}
+.login_input {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 14px; BACKGROUND: none transparent scroll repeat 0% 0%; VERTICAL-ALIGN: middle; BORDER-LEFT: medium none; WIDTH: 136px; BORDER-BOTTOM: medium none; HEIGHT: 20px
+}
+.dlogin_input {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 14px; BACKGROUND: none transparent scroll repeat 0% 0%; VERTICAL-ALIGN: middle; BORDER-LEFT: medium none; WIDTH: 50px; BORDER-BOTTOM: medium none; HEIGHT: 20px
+}
+.elogin_input {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 14px; BACKGROUND: none transparent scroll repeat 0% 0%; VERTICAL-ALIGN: middle; BORDER-LEFT: medium none; WIDTH: 210px; BORDER-BOTTOM: medium none; HEIGHT: 20px
+}
+.login_textarea {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 14px; BACKGROUND: none transparent scroll repeat 0% 0%; VERTICAL-ALIGN: middle; BORDER-LEFT: medium none; WIDTH: 280px; BORDER-BOTTOM: medium none; HEIGHT: 90px
+}
+.text {
+	 WIDTH: 180px;
+}
+.sz {
+	margin-bottom: 5px;
+}
+
+.button3 {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(../images/login/dl.jpg); BORDER-LEFT: 0px; WIDTH: 78px; BORDER-BOTTOM: 0px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 32px
+}
+
+.login-text-focus{ border:1px solid #E6BF73;}
+
+.footer-inner {
+	WIDTH: 1004px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+.service-promise {
+	WIDTH: 652px;
+	HEIGHT: 110px;
+	margin-right: auto;
+	margin-left: auto;
+	TEXT-ALIGN: center;
+}
+
+.service-promise A {
+	FLOAT: left; 
+}
+.support DL {
+	FLOAT: left; WIDTH: 160px
+}
+.service-promise A {
+	MARGIN-TOP: 8px;  LINE-HEIGHT: 20px; PADDING-TOP: 0px; HEIGHT: 20px; 
+}
+.service-promise A:hover {
+	COLOR: #333; TEXT-DECORATION: none
+}
+.service-promise .sp-wares {
+	MARGIN-LEFT: 31px
+}
+.service-promise .sp-one {
+	MARGIN-LEFT: 30px
+}
+.service-promise .sp-delivery {
+	MARGIN-LEFT: 22px
+}
+.service-promise .sp-pay {
+	MARGIN-LEFT: 22px
+}
+.service-promise .sp-alipay {
+	MARGIN-LEFT: 34px
+}
+.service-promise .sp-service {
+	MARGIN-LEFT: 24px
+}
+.support DT SPAN {
+	VISIBILITY: hidden
+}
+.support DT {
+	BACKGROUND: url(http://img04.taobaocdn.com/tps/i4/T1IARUXaFnXXXXXXXX.png) no-repeat
+}
+.st-hotline SPAN {
+	BACKGROUND: url(http://img04.taobaocdn.com/tps/i4/T1IARUXaFnXXXXXXXX.png) no-repeat
+}
+.st-feedback SPAN {
+	BACKGROUND: url(http://img04.taobaocdn.com/tps/i4/T1IARUXaFnXXXXXXXX.png) no-repeat
+}
+.support {
+	 HEIGHT: 98px
+}
+.support DL {
+	WIDTH: 116px; HEIGHT: 98px
+}
+.support DT {
+	MARGIN-TOP: 4px; MARGIN-BOTTOM: 6px; HEIGHT: 30px
+}
+.support DD {
+	LINE-HEIGHT: 22px;
+	POSITION: relative;
+	height: 22px;
+	margin-left: 1px;
+}
+.support DD A {
+	MARGIN-LEFT: 10px
+}
+.support B {
+	BORDER-RIGHT: transparent 4px dashed; BORDER-TOP: transparent 4px dashed; FONT-SIZE: 0px; LEFT: 2px; BORDER-LEFT: #d33051 4px solid; WIDTH: 0px; LINE-HEIGHT: 0; BORDER-BOTTOM: transparent 4px dashed; POSITION: absolute; TOP: 8px; HEIGHT: 0px
+}
+.st-pay DT {
+	BACKGROUND-POSITION: 0px -30px
+}
+.st-delivery DT {
+	BACKGROUND-POSITION: 0px -60px
+}
+.st-service DT {
+	BACKGROUND-POSITION: 0px -90px
+}
+.st-support DT {
+	BACKGROUND-POSITION: 0px -120px
+}
+.support .st-pay {
+	WIDTH: 146px
+}
+.st-support {
+	BORDER-RIGHT: #bfbfbf 1px solid
+}
+.st-hotline {
+FLOAT: left; WIDTH: 208px; HEIGHT: 98px
+}
+.st-hotline SPAN {
+	BACKGROUND-POSITION: 0px -155px; DISPLAY: block; MARGIN: 25px 0px 0px 18px; OVERFLOW: hidden; WIDTH: 180px; TEXT-INDENT: -999em; HEIGHT: 45px
+}
+.st-feedback SPAN {
+	BACKGROUND-POSITION: 0px -155px; DISPLAY: block; MARGIN: 25px 0px 0px 18px; OVERFLOW: hidden; WIDTH: 180px; TEXT-INDENT: -999em; HEIGHT: 45px
+}
+.st-feedback SPAN {
+	BACKGROUND-POSITION: 0px -222px; MARGIN: 32px 0px 0px 25px; WIDTH: 82px
+}
+.st-feedback {
+	FLOAT: left; WIDTH: 108px; HEIGHT: 98px
+}
+.sn-coupon A {
+	PADDING-LEFT: 24px; FLOAT: left; POSITION: relative
+}
+.sn-coupon S {
+	BACKGROUND-POSITION: -216px 0px; LEFT: 1px; WIDTH: 18px; POSITION: absolute; TOP: 0px; HEIGHT: 25px
+}
+.copyright {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 16px;
+	LINE-HEIGHT: 28px;
+	PADDING-TOP: 16px;
+	TEXT-ALIGN: center;
+	width: 100%;
+	color: #767676;
+	font-size: 12px;
+}
+.copyright1 {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	LINE-HEIGHT: 28px;
+	TEXT-ALIGN: center;
+	width: 100%;
+	color: #767676;
+	font-size: 12px;
+}
+.foot-nav {
+	WIDTH: 1006px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.copyright1 A {
+	COLOR: #797979;
+	text-decoration: none;
+	font-size: 14px;
+}
+.copyright A {
+	COLOR: #797979;
+	text-decoration: none;
+	font-size: 14px;
+}
+.declare{
+	padding-bottom:16px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d8d8d8;
+	width: 1006px;
+}

@@ -1,0 +1,2 @@
+﻿var CustomersData = 
+{"rows":[{"area":"44","areaname":"七楼专柜","attachment1":null,"attachment2":null,"attachment3":null,"bugDesc":"断网","bugSuggest":null,"bugTitle":"不能上网","bugid":10863,"bugywid":"56a75f5e-35f7-4c2c-92c4-94382e8c9388","cljssj":"2013-01-24","clkssj":"2013-01-24","clr":null,"createid":"19921","mcate":"11111","note":"七匹狼","sbr":"pdz","sbsj":"2013-01-24","status":"已经解决"}],"total":1};

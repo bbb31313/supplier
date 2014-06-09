@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document 全局CSS*/
+body{margin:0px; padding:0px; font:12px/1.5 "Lucida Grande", microsoft yahei, 微软雅黑;color:#666;}
+a{font-size:12px; color:#333;}
+a:link,a:visited{text-decoration:none;color:#333;}
+a:hover{text-decoration:none;}
+div, ul{margin: 0;padding: 0;font-weight: normal;font-style: normal;font-size: 100%;font-family: inherit;}
+li{list-style-type:none;}
+img{border:0;}
+ol{list-style:none;}
+.clear{clear:both; }
+.dhbtn{width:271px; margin:0px auto; background:url(../images/anniu.jpg);overflow:hidden;}
+/* =============================== */
+.left{float:left;}
+.right{float:right;}
+/* =============================== */
+
+/* =head部分= */
+.logo{width:1024px; margin:0px auto; background:url(../images/top1.png);overflow:hidden;position:absolute;z-index: 120;}
+
+.righthome{float:right;margin-right:20px; cursor:hand;}
+/* ==foot部分== */
+.footBox{height:135px; margin:0px auto; background:url(../images/footBJ.jpg) repeat-x center top; overflow:hidden;}
+
+/*==内容部分css框架==*/
+.floorpic{width:1028px; margin-top: 2cm; overflow:hidden;}
+.floorbrand{width:1028px; margin:0 auto; overflow:hidden;}
+.floorpic span{font-size: 36px;}
+.frmebox{ width:1024px; overflow:hidden; margin-top: 3cm;}
+.salebox{ width:1024px; margin:0 auto; }
+.spacebox{ width:10px; float:left; border:0px; height:614px;}
+.leftbox{ width:420px; float:left; height:auto !important; height:700px; min-height:700px;}
+.rightbox{ width:600px; float:right; overflow:hidden;}
+.binfo{font-size: 24px;margin-left: 20px;}
+.introduce{height:260px; min-height:100px;}
+.introduce span{font-size: 18px;}
+/* =============================== */
+.shoppro001{overflow:hidden; *zoom:1; background-color:#fff; margin:0px;}
+.shoppro001 li{width:140px; height:195px; overflow:hidden; overflow:hidden; text-align:center; margin:5px 0px 0px 2px; float:left; display:inline;}
+.shoppro001 li p{line-height:18px; margin:5px; height:36px; overflow:hidden;}
+.shoppro001 li p a{display:block;}
+.shoppro001 li em{font-weight:normal; display:block;}
+
+.blist{margin-top: 30px;}
+
+
+.brandgoodspro{overflow:hidden; *zoom:1; background-color:#fff; margin:0px;}
+.brandgoodspro li{width:180px; height:240px; overflow:hidden; overflow:hidden; text-align:center; margin:5px 0px 0px 2px; float:left; display:inline;}
+.brandgoodspro li p{line-height:18px; margin:5px; height:30px; overflow:hidden;}
+.brandgoodspro li p a{display:block;}
+/* ============品牌列表页=============== */
+.catelist{width:820px; margin:0px auto; overflow:hidden;}
+.brandcate{width:265px;height:62px; margin-left:5px; background:url(../images/brandcatebg.jpg);float: left;cursor: hand;}
+.brandcatetext{margin-left:108px;margin-top:8px;font-family:"楷体"; font-size: 24px;}
+/* ============商品详情页=============== */
+.tabCon{border:1px solid #dfdfdf; padding:10px; overflow:hidden; *zoom:1;margin-top: 2.5cm;}
+.proLeft{width:740px; height:560px; background-color:#fff; float:left; overflow:hidden;}
+.proImg{width:700px; height:530px; background-color:#fff; float:left; overflow:hidden; text-align:center;}
+.proText{width:260px; float:right; background-color:#eaeaea; height:560px;}
+.p01{font-size:14px; color:#000; font-weight:bold;}
+.p02{font-size:14px; color:#000; font-weight:bold; text-decoration:line-through;}
+.p03{font-size:16px; color:#000; font-weight:bold; color:#ed1c24;}
+/* ============电子杂志=============== */
+.turn_left{
+    background-image: url("../images/iarrow.png");
+    cursor: pointer;
+    height: 80px;
+    width: 50px;
+	background-position: 1px 0;
+	position: absolute;
+	z-index:1;
+	top: 320px;	
+}
+.turn_right{
+    background-image: url("../images/iarrow.png");
+    cursor: pointer;
+    height: 80px;
+    width: 50px;
+	background-position: -36px 0;
+	position: absolute;
+	z-index:110;
+	top: 320px;	
+}
+.turn_left_layout{left:0px;	}
+.turn_right_layout{right:0px;}
+#bookflip{color:#ffffff;margin-top: 2cm;}
+
+/* ============促销内容页=============== */
+    #slides {
+      display: none
+    }
+
+    .container {
+      margin-top: 2cm;
+    }

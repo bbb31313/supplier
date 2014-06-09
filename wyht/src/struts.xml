@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 默认的视图主题 -->
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.objectFactory" value="spring" />
+
+
+	<package name="mysysjson" namespace="/json" extends="json-default">
+		<action name="json_*" class="jsonAction" method="{1}">
+			<result type="json">
+				<param name="root">menus</param>
+			</result>
+			<result name="login" type="json">
+				<param name="root">ajaxResult</param>
+			</result>
+			<result name="changepwd" type="json">
+				<param name="root">ajaxResult</param>
+			</result>
+			<result name="tool" type="json">
+				<param name="root">ajaxResult</param>
+			</result>
+			<result name="seconditem" type="json">
+				<param name="root">secondSelect</param>
+			</result>
+			<result name="userlist" type="json">
+				<param name="root">userItems</param>
+			</result>
+			<result name="shoplist" type="json">
+				<param name="root">shopItems</param>
+			</result>
+			<result name="timelist" type="json">
+				<param name="root">timeItems</param>
+			</result>
+			<result name="monthlist" type="json">
+				<param name="root">monthItems</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="queryjson" namespace="/query" extends="json-default">
+		<action name="query_*" class="queryAction" method="{1}">
+
+			<result name="classlist" type="json">
+				<param name="root">maxClassList</param>
+			</result>
+			<result name="shoplist" type="json">
+				<param name="root">shopBrandList</param>
+			</result>
+			<result name="secondlist" type="json">
+				<param name="root">secondList</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="wyrptjson" namespace="/wyrpt" extends="json-default">
+		<action name="rpt_*" class="wyRptAction" method="{1}">
+
+			<result name="classlist" type="json">
+				<param name="root">maxClassList</param>
+			</result>
+
+		</action>
+	</package>
+
+	<package name="busniessjson" namespace="/bus" extends="json-default">
+		<action name="bus_*" class="wyhtBusAction" method="{1}">
+
+			<result name="busresult" type="json">
+				<param name="root">ajaxResult</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="lyjson" namespace="/ly" extends="json-default">
+		<action name="ly_*" class="wyhtLyAction" method="{1}">
+
+			<result name="lyresult" type="json">
+				<param name="root">ajaxResult</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="moneyjson" namespace="/money" extends="json-default">
+		<action name="money_*" class="wyhtMoneyAction" method="{1}">
+
+			<result name="moneyresult" type="json">
+				<param name="root">ajaxResult</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="pmjson" namespace="/pm" extends="json-default">
+		<action name="pm_*" class="wypmBusAction" method="{1}">
+
+			<result name="wypmresult" type="json">
+				<param name="root">ajaxResult</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="myreport" extends="jasperreports-default">
+		<action name="jasperAction" class="reportAction">
+			<!-- 返回类型必须是jasper，这是固定写法 -->
+			<result name="success" type="jasper">
+				<!-- 配置报表属性 -->
+				<param name="location">/jasper/report2.jasper</param>
+				<param name="format">XLS</param>
+				<param name="dataSource">list</param>
+				<param name="contentDisposition">attachment</param>
+			</result>
+		</action>
+	</package>
+	<package name="px" namespace="/images" extends="struts-default">
+		<action name="px">
+			<result>/images/px.gif</result>
+		</action>
+	</package>
+	<package name="export" namespace="/exp" extends="struts-default">
+		<action name="downLoad" class="exportAction" method="downLoadExecl">
+			<result name="excel" type="stream">
+
+				<param name="contentType">application/vnd.ms-excel</param>
+
+				<param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+
+				<param name="bufferSize">1024</param>
+
+				<param name="inputName">excelStream</param>
+
+			</result>
+		</action>
+
+	</package>
+
+</struts>
